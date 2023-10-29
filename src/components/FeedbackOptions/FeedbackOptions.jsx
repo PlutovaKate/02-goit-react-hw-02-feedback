@@ -1,5 +1,10 @@
 import React from 'react';
 import { List, BtnList, ListItem } from './FeedbackOptions.styled';
+import {
+  HiOutlineHandThumbUp,
+  HiOutlineHandRaised,
+  HiOutlineHandThumbDown,
+} from 'react-icons/hi2';
 
 const Feedback = ({
   onIncreamentGood,
@@ -8,18 +13,25 @@ const Feedback = ({
 }) => {
   return (
     <List>
-      <ListItem>
-        <BtnList type="button" onClick={onIncreamentGood}>
+      <ListItem feedback={'good'}>
+        <BtnList feedback={'good'} type="button" onClick={onIncreamentGood}>
+          <HiOutlineHandThumbUp />
           Good
         </BtnList>
       </ListItem>
-      <ListItem>
-        <BtnList type="button" onClick={onIncreamentNeutral}>
+      <ListItem feedback={'neutral'}>
+        <BtnList
+          feedback={'neutral'}
+          type="button"
+          onClick={onIncreamentNeutral}
+        >
+          <HiOutlineHandRaised />
           Neutral
         </BtnList>
       </ListItem>
-      <ListItem>
-        <BtnList type="button" onClick={onIncreamentBad}>
+      <ListItem feedback={'bad'}>
+        <BtnList feedback={'bad'} type="button" onClick={onIncreamentBad}>
+          <HiOutlineHandThumbDown />
           Bad
         </BtnList>
       </ListItem>

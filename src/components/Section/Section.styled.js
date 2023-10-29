@@ -1,12 +1,16 @@
 import styled from 'styled-components';
 
 export const SectionFeedback = styled.section`
-  background-color: silver;
-  width: 312px;
+  background-color: ${p => p.theme.colors.main};
+  width: 372px;
   margin-top: 10px;
   padding: 20px;
   border-radius: 4px;
-  box-shadow: 2px 3px 7px #201e20;
+  box-shadow: 2px 3px 7px ${p => p.theme.colors.button};
+
+  @media (max-width: 800px) {
+    background-color: beige;
+  }
 `;
 
 export const SectionTitle = styled.h2`
