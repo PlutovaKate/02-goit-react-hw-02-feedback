@@ -1,4 +1,5 @@
 import React from 'react';
+import { List, BtnList, ListItem } from './FeedbackOptions.styled';
 
 const Feedback = ({
   onIncreamentGood,
@@ -6,23 +7,23 @@ const Feedback = ({
   onIncreamentBad,
 }) => {
   return (
-    <ul>
-      <li>
-        <button type="button" onClick={onIncreamentGood}>
+    <List>
+      <ListItem>
+        <BtnList type="button" onClick={onIncreamentGood}>
           Good
-        </button>
-      </li>
-      <li>
-        <button type="button" onClick={onIncreamentNeutral}>
+        </BtnList>
+      </ListItem>
+      <ListItem>
+        <BtnList type="button" onClick={onIncreamentNeutral}>
           Neutral
-        </button>
-      </li>
-      <li>
-        <button type="button" onClick={onIncreamentBad}>
+        </BtnList>
+      </ListItem>
+      <ListItem>
+        <BtnList type="button" onClick={onIncreamentBad}>
           Bad
-        </button>
-      </li>
-    </ul>
+        </BtnList>
+      </ListItem>
+    </List>
   );
 };
 
