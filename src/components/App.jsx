@@ -10,23 +10,29 @@ export class App extends Component {
     bad: 0,
   };
 
-  handleIncreamentGood = value => {
+  handleIncreament = value => {
     this.setState(prevState => {
-      return { good: prevState.good + 1 };
+      return { [value]: prevState[value] + 1 };
     });
   };
 
-  handleIncreamentNeutral = value => {
-    this.setState(prevState => {
-      return { neutral: prevState.neutral + 1 };
-    });
-  };
+  // handleIncreamentGood = value => {
+  //   this.setState(prevState => {
+  //     return { good: prevState.good + 1 };
+  //   });
+  // };
 
-  handleIncreamentBad = value => {
-    this.setState(prevState => {
-      return { bad: prevState.bad + 1 };
-    });
-  };
+  // handleIncreamentNeutral = value => {
+  //   this.setState(prevState => {
+  //     return { neutral: prevState.neutral + 1 };
+  //   });
+  // };
+
+  // handleIncreamentBad = value => {
+  //   this.setState(prevState => {
+  //     return { bad: prevState.bad + 1 };
+  //   });
+  // };
 
   totalFeedback = value =>
     Number(this.state.good + this.state.neutral + this.state.bad);
@@ -40,9 +46,11 @@ export class App extends Component {
       <div>
         <Section title="Please leave feedback">
           <Feedback
-            onIncreamentGood={this.handleIncreamentGood}
-            onIncreamentNeutral={this.handleIncreamentNeutral}
-            onIncreamentBad={this.handleIncreamentBad}
+            // onIncreamentGood={this.handleIncreament}
+            // onIncreamentNeutral={this.handleIncreament}
+            // onIncreamentBad={this.handleIncreament}
+            options={Object.keys(this.state)}
+            onLeaveFeedback={this.handleIncreament}
           />
         </Section>
 
