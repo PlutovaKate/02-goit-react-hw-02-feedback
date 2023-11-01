@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const GetBorderColor = props => {
-  switch (props.feedback) {
+  switch (props.option) {
     case 'good':
       return props.theme.colors.good;
     case 'neutral':

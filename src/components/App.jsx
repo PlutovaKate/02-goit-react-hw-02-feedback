@@ -16,24 +16,6 @@ export class App extends Component {
     });
   };
 
-  // handleIncreamentGood = value => {
-  //   this.setState(prevState => {
-  //     return { good: prevState.good + 1 };
-  //   });
-  // };
-
-  // handleIncreamentNeutral = value => {
-  //   this.setState(prevState => {
-  //     return { neutral: prevState.neutral + 1 };
-  //   });
-  // };
-
-  // handleIncreamentBad = value => {
-  //   this.setState(prevState => {
-  //     return { bad: prevState.bad + 1 };
-  //   });
-  // };
-
   totalFeedback = value =>
     Number(this.state.good + this.state.neutral + this.state.bad);
 
